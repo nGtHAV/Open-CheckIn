@@ -230,8 +230,8 @@
     -fx-border-radius: 12;
     -fx-border-width: 1;
     -fx-padding: 24;
-    -fx-alignment: TOP-CENTER;
-    -fx-max-width: 300;
+    -fx-alignment: CENTER;
+    -fx-max-width: 600;
     -fx-effect: dropshadow(gaussian, rgba(31, 36, 48, 0.08), 18, 0, 0, 5);
 }
 
@@ -279,13 +279,13 @@
 
 .scanner-left {
     -fx-background-color: #1E232B;
-    -fx-padding: 28;
+    -fx-padding: 32;
     -fx-alignment: CENTER;
 }
 
 .scanner-right {
     -fx-background-color: #12151B;
-    -fx-padding: 18;
+    -fx-padding: 32;
 }
 
 .scanner-right .label {

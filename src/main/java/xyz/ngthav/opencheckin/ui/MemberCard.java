@@ -18,7 +18,8 @@ import xyz.ngthav.opencheckin.util.Files;
  */
 public final class MemberCard {
 
-    private static final int PHOTO_PX = 128;
+    private static final int PHOTO_HEIGHT = 480;
+    private static final int PHOTO_WIDTH = 360;
 
     private MemberCard() {
     }
@@ -61,12 +62,12 @@ public final class MemberCard {
             try {
                 Image img = new Image(
                         Files.picturePath(roomId, member.pictureName()).toUri().toString(),
-                        PHOTO_PX, PHOTO_PX, false, true);
+                        PHOTO_WIDTH, PHOTO_HEIGHT, false, true);
                 if (!img.isError()) {
                     ImageView view = new ImageView(img);
-                    view.setFitWidth(PHOTO_PX);
-                    view.setFitHeight(PHOTO_PX);
-                    Rectangle clip = new Rectangle(PHOTO_PX, PHOTO_PX);
+                    view.setFitWidth(PHOTO_WIDTH);
+                    view.setFitHeight(PHOTO_HEIGHT);
+                    Rectangle clip = new Rectangle(PHOTO_WIDTH, PHOTO_HEIGHT);
                     clip.setArcWidth(24);
                     clip.setArcHeight(24);
                     view.setClip(clip);
@@ -80,9 +81,9 @@ public final class MemberCard {
         initials.getStyleClass().add("member-card-initials");
         StackPane tile = new StackPane(initials);
         tile.getStyleClass().add("member-card-photo-placeholder");
-        tile.setPrefSize(PHOTO_PX, PHOTO_PX);
-        tile.setMinSize(PHOTO_PX, PHOTO_PX);
-        tile.setMaxSize(PHOTO_PX, PHOTO_PX);
+        tile.setPrefSize(PHOTO_WIDTH, PHOTO_HEIGHT);
+        tile.setMinSize(PHOTO_WIDTH, PHOTO_HEIGHT);
+        tile.setMaxSize(PHOTO_WIDTH, PHOTO_HEIGHT);
         return tile;
     }
 

@@ -63,7 +63,7 @@ public final class ScannerWindow {
         showWaiting();
         leftHolder.getStyleClass().add("scanner-left");
         leftHolder.setPrefWidth(360);
-        leftHolder.setMinWidth(320);
+        leftHolder.setMinWidth(600);
 
         cameraView.setPreserveRatio(true);
         cameraView.fitWidthProperty().bind(cameraArea.widthProperty());
