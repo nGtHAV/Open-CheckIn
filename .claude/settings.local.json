@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//usr/lib/jvm/java-21-openjdk/bin/**)",
+      "Bash(/usr/lib/jvm/java-21-openjdk/bin/java -version)"
+    ]
+  }
+}

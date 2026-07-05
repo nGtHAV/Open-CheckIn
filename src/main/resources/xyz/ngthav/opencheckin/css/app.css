@@ -1,0 +1,309 @@
+/*
+ * Open-CheckIn — "human-made but beautiful" (TASK.md §16).
+ * One restrained accent, neutral greys, generous whitespace, soft shadows.
+ * Palette: bg #F6F7F9 · surface #FFF · hairline #E7E9EE · text #1F2430 / #6B7280
+ *          accent #3B6EA5 · success #3C9A6B · danger #C1554F
+ */
+
+.root {
+    -fx-font-family: "Segoe UI", "SF Pro Text", "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #F6F7F9;
+    -accent: #3B6EA5;
+    -accent-weak: #E6EDF5;
+    -danger: #C1554F;
+    -text-primary: #1F2430;
+    -text-secondary: #6B7280;
+    -hairline: #E7E9EE;
+}
+
+/* ---------- shell ---------- */
+
+.app-shell {
+    -fx-background-color: #F6F7F9;
+}
+
+.sidebar {
+    -fx-background-color: #ECEEF3;
+    -fx-border-color: transparent -hairline transparent transparent;
+    -fx-border-width: 1;
+    -fx-padding: 24 16 16 16;
+    -fx-spacing: 20;
+    -fx-min-width: 248;
+    -fx-pref-width: 248;
+}
+
+.wordmark {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+    -fx-padding: 0 0 4 4;
+}
+
+.room-row {
+    -fx-padding: 4 0 4 0;
+}
+
+.room-selector {
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+}
+
+.nav-list {
+    -fx-padding: 8 0 0 0;
+}
+
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 14px;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 8;
+    -fx-graphic-text-gap: 12;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.nav-item:hover {
+    -fx-background-color: #E2E6EC;
+}
+
+.nav-item:selected {
+    -fx-background-color: -accent-weak;
+    -fx-text-fill: -accent;
+    -fx-font-weight: bold;
+}
+
+.nav-icon {
+    -fx-icon-color: -text-secondary;
+    -fx-icon-size: 18;
+}
+
+.nav-item:selected .nav-icon {
+    -fx-icon-color: -accent;
+}
+
+/* ---------- buttons ---------- */
+
+.button {
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+}
+
+.primary-button {
+    -fx-background-color: -accent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: derive(-accent, -8%);
+}
+
+.primary-button:pressed {
+    -fx-background-color: derive(-accent, -16%);
+}
+
+.secondary-button {
+    -fx-background-color: white;
+    -fx-text-fill: -text-primary;
+    -fx-border-color: -hairline;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.danger-button {
+    -fx-background-color: white;
+    -fx-text-fill: -danger;
+    -fx-border-color: -danger;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-padding: 6 8 6 8;
+    -fx-background-radius: 8;
+}
+
+.icon-button:hover {
+    -fx-background-color: #E2E6EC;
+}
+
+.danger-icon-button .ikonli-font-icon,
+.danger-icon-button .nav-icon {
+    -fx-icon-color: -danger;
+}
+
+/* ---------- pages & cards ---------- */
+
+.page {
+    -fx-padding: 32;
+}
+
+.page-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: -hairline;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(gaussian, rgba(31, 36, 48, 0.06), 16, 0, 0, 4);
+}
+
+.card-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+/* ---------- empty / placeholder states ---------- */
+
+.empty-state {
+    -fx-alignment: CENTER;
+    -fx-padding: 48;
+}
+
+.empty-heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+.empty-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: -text-secondary;
+    -fx-text-alignment: center;
+}
+
+/* ---------- forms ---------- */
+
+.form-error {
+    -fx-text-fill: -danger;
+    -fx-font-size: 12px;
+}
+
+.search-box {
+    -fx-background-radius: 8;
+}
+
+/* ---------- dashboard ---------- */
+
+.counter-value {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -accent;
+}
+
+.card-preview {
+    -fx-alignment: CENTER;
+    -fx-padding: 8;
+}
+
+.recent-row {
+    -fx-padding: 6 2 6 2;
+    -fx-border-color: transparent transparent -hairline transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.recent-name {
+    -fx-text-fill: -text-primary;
+}
+
+.recent-time {
+    -fx-text-fill: -text-secondary;
+}
+
+/* ---------- member card (person card: scanner + manual confirmation) ---------- */
+
+.member-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: -hairline;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 24;
+    -fx-alignment: TOP-CENTER;
+    -fx-max-width: 300;
+    -fx-effect: dropshadow(gaussian, rgba(31, 36, 48, 0.08), 18, 0, 0, 5);
+}
+
+.member-card-name {
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+.member-card-desc {
+    -fx-font-size: 13px;
+    -fx-text-fill: -text-secondary;
+    -fx-text-alignment: center;
+}
+
+.member-card-action {
+    -fx-background-color: -accent-weak;
+    -fx-text-fill: -accent;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12 4 12;
+    -fx-background-radius: 999;
+}
+
+.member-card-waiting {
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-secondary;
+}
+
+.member-card-initials {
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -accent;
+}
+
+.member-card-photo-placeholder {
+    -fx-background-color: -accent-weak;
+    -fx-background-radius: 16;
+}
+
+/* ---------- scanner window (dramatic: dark + bright reticle, §16) ---------- */
+
+.scanner-root {
+    -fx-background-color: #1E232B;
+}
+
+.scanner-left {
+    -fx-background-color: #1E232B;
+    -fx-padding: 28;
+    -fx-alignment: CENTER;
+}
+
+.scanner-right {
+    -fx-background-color: #12151B;
+    -fx-padding: 18;
+}
+
+.scanner-right .label {
+    -fx-text-fill: #C9CED6;
+}
+
+.scanner-camera {
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+    -fx-min-height: 360;
+}
+
+.scanner-nocamera {
+    -fx-text-fill: #C9CED6;
+    -fx-font-size: 15px;
+    -fx-text-alignment: center;
+}
+
+.scanner-devseam {
+    -fx-padding: 6 0 0 0;
+}
